@@ -381,3 +381,29 @@
   min-width: 160px;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .mp-editor-area { flex-direction: column; }
+  .mp-preview-panel { min-height: 200px; }
+  .mp-tabs { flex-wrap: wrap; }
+}
+
+@media (max-width: 480px) {
+  .mp-step-header { flex-wrap: wrap; gap: 8px; }
+  .mp-title { font-size: 15px; }
+}
+
+/* ── Responsividade MiniProject ───────────────────────────────── */
+@media (max-width: 768px) {
+  .mp-layout { flex-direction: column; }
+  .mp-editor-panel, .mp-preview-panel { width: 100%; min-height: 240px; }
+  .mp-tabs { flex-wrap: nowrap; overflow-x: auto; }
+  .mp-step-header { flex-wrap: wrap; gap: 8px; }
+  .mp-nav { flex-wrap: wrap; gap: 8px; }
+  .mp-nav .btn { flex: 1; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .mp-title { font-size: 16px; }
+  .mp-step-desc { font-size: 13px; }
+  .mp-tab { font-size: 11px; padding: 7px 10px; }
+}

@@ -335,3 +335,24 @@
   border-left: 3px solid var(--accent);
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .project-card { padding: 16px; }
+  .projects-header h1 { font-size: 22px; }
+}
+
+/* ── Responsividade Projects ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card { padding: 16px; }
+  .project-filters { flex-wrap: wrap; gap: 6px; }
+  .filter-btn { font-size: 12px; padding: 6px 12px; }
+}
+@media (max-width: 480px) {
+  .project-card { padding: 14px; }
+  .project-header { flex-wrap: wrap; }
+}

@@ -43,3 +43,11 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* ── Responsividade NotFound ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .not-found-code { font-size: 80px; }
+  .not-found-title { font-size: 20px; }
+  .not-found-actions { flex-direction: column; gap: 10px; }
+  .not-found-actions .btn { width: 100%; justify-content: center; }
+}

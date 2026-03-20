@@ -150,3 +150,17 @@
 .output-content:has(:first-child:contains('❌')) {
   color: var(--red);
 }
+
+/* ── Responsividade CodeEditor ────────────────────────────────── */
+@media (max-width: 768px) {
+  .code-editor { font-size: 12px; margin: 12px 0; }
+  .editor-body { max-height: 300px; }
+  .editor-textarea { font-size: 12px; padding: 12px; }
+  .line-numbers { min-width: 32px; }
+  .line-num { font-size: 11px; }
+}
+@media (max-width: 480px) {
+  .editor-actions { gap: 4px; }
+  .editor-btn { padding: 4px 8px; font-size: 11px; }
+  .editor-textarea { padding: 10px; }
+}

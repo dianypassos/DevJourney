@@ -182,3 +182,16 @@
   font-weight: 600;
   color: var(--green);
 }
+
+/* ── Responsividade PhaseChecklist ────────────────────────────── */
+@media (max-width: 768px) {
+  .pcl-wrap { margin-left: 20px; }
+  .pcl-header { padding: 11px 14px; }
+  .pcl-body { padding: 12px 14px 14px; }
+  .pcl-item { padding: 8px 10px; }
+  .pcl-item-text { font-size: 12px; }
+}
+@media (max-width: 480px) {
+  .pcl-wrap { margin-left: 12px; }
+  .pcl-title { font-size: 12px; }
+}

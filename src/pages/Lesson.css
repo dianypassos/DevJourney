@@ -610,3 +610,33 @@
   line-height: 1.6;
   background: var(--bg-2);
 }
+
+@media (max-width: 480px) {
+  .lesson-header { padding: 12px 12px 0; }
+  .lesson-content { padding: 16px 12px; }
+  .lesson-title { font-size: 18px; }
+  .lesson-tab { padding: 8px 8px; font-size: 11px; gap: 4px; }
+  .lesson-cta { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Responsividade Lesson ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .lesson-header { padding: 14px 16px 0; }
+  .lesson-content { padding: 20px 16px 80px; }
+  .lesson-title { font-size: clamp(18px, 5vw, 26px); margin-bottom: 14px; }
+  .lesson-tabs { gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .lesson-tab { padding: 9px 12px; font-size: 12px; white-space: nowrap; }
+  .lesson-cta { flex-direction: column; align-items: flex-start; }
+  .lesson-cta .btn { width: 100%; justify-content: center; }
+  .lesson-exercise-wrapper { max-width: 100%; }
+  .lesson-quiz-wrapper { max-width: 100%; }
+  .lesson-notes { max-width: 100%; }
+  .lesson-nav-row { flex-wrap: wrap; gap: 8px; }
+}
+@media (max-width: 480px) {
+  .lesson-tab { padding: 8px 10px; font-size: 11px; }
+  .lesson-tab svg { width: 13px; height: 13px; }
+  .lesson-meta { flex-wrap: wrap; gap: 6px; }
+  .completed-actions { flex-direction: column; }
+  .completed-actions .btn { width: 100%; justify-content: center; }
+}

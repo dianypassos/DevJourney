@@ -263,3 +263,20 @@
     gap: 10px;
   }
 }
+
+@media (max-width: 768px) {
+  .resources-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .resources-header h1 { font-size: 22px; }
+}
+
+/* ── Responsividade Resources ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .resources-grid { grid-template-columns: 1fr; }
+  .resources-filters { flex-wrap: wrap; gap: 6px; }
+}
+@media (max-width: 480px) {
+  .resource-card { padding: 12px; }
+}

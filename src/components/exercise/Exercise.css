@@ -331,3 +331,26 @@
 
 .success-title { font-weight: 700; font-size: 14px; color: var(--text-1); }
 .success-sub { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+
+@media (max-width: 600px) {
+  .code-area { min-height: 160px; }
+  .code-textarea { font-size: 12px; }
+  .exercise-title { font-size: 15px; }
+  .exercise-success { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Responsividade Exercise ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .exercise-container { gap: 12px; }
+  .exercise-title { font-size: 16px; }
+  .code-area { min-height: 160px; }
+  .code-textarea { min-height: 160px; font-size: 12px; }
+  .exercise-success { flex-direction: column; align-items: flex-start; }
+  .exercise-success .btn { width: 100%; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .editor-toolbar { padding: 6px 10px; }
+  .editor-lang { font-size: 10px; }
+  .editor-btn { padding: 3px 8px; font-size: 10px; }
+  .output-pre { font-size: 11px; }
+}

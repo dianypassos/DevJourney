@@ -305,3 +305,21 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+@media (max-width: 600px) {
+  .quiz-option { font-size: 13px; padding: 12px 14px; }
+  .quiz-question { font-size: 15px; }
+  .quiz-results { padding: 24px 16px; }
+}
+
+/* ── Responsividade Quiz ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .quiz-question { font-size: 15px; }
+  .quiz-option { padding: 12px 14px; font-size: 13px; }
+  .quiz-header { flex-wrap: wrap; gap: 8px; }
+}
+@media (max-width: 480px) {
+  .quiz-question { font-size: 14px; }
+  .quiz-option { padding: 10px 12px; }
+  .quiz-results { padding: 24px 16px; }
+}

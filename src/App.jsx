@@ -13,7 +13,42 @@ import ChatWidget from './components/chat/ChatWidget.jsx';
 import ErrorBoundary from './components/ErrorBoundary.jsx';
 import { AstraProvider } from './contexts/AstraContext.tsx';
 import { ThemeProvider } from './contexts/ThemeContext.tsx';
+import { SidebarProvider } from './contexts/SidebarContext.tsx';
 import TopBar from './components/layout/TopBar.jsx';
+
+export default function App() {
+  return (
+    <ErrorBoundary>
+    <ThemeProvider>
+    <AstraProvider>
+    <SidebarProvider>
+    <BrowserRouter>
+      <div className="noise-overlay" />
+      <div className="app-layout">
+        <Sidebar />
+        <div className="main-content">
+          <TopBar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/lesson/:moduleId" element={<Lesson />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/flashcards" element={<Flashcards />} />
+            <Route path="/setup" element={<Setup />} />
+            <Route path="/career" element={<Career />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </div>
+      <ChatWidget />
+    </BrowserRouter>
+    </SidebarProvider>
+    </AstraProvider>
+    </ThemeProvider>
+    </ErrorBoundary>
+  );
+}
 
 export default function App() {
   return (

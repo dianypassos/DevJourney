@@ -334,3 +334,25 @@
   border-color: var(--accent);
   color: var(--accent);
 }
+
+@media (max-width: 768px) {
+  .career-sections { grid-template-columns: 1fr; }
+  .career-tips { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .career-header h1 { font-size: 22px; }
+}
+
+/* ── Responsividade Career ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .career-sections { gap: 24px; }
+  .career-section { padding: 18px; }
+  .tip-card { padding: 14px; }
+  .interview-grid { grid-template-columns: 1fr; }
+  .interview-card { padding: 14px; }
+}
+@media (max-width: 480px) {
+  .career-section { padding: 14px; }
+  .career-section h2 { font-size: 16px; }
+}

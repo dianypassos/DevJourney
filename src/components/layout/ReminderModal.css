@@ -205,3 +205,9 @@
 .rm-disable-btn:hover {
   background: rgba(245, 71, 71, 0.07) !important;
 }
+
+/* ── Responsividade ReminderModal ─────────────────────────────── */
+@media (max-width: 480px) {
+  .rm-modal { margin: 12px; border-radius: var(--radius-lg); }
+  .rm-actions .btn { font-size: 13px; }
+}

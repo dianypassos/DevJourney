@@ -389,3 +389,37 @@
   color: var(--text-3);
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .fc-controls { flex-direction: column; gap: 10px; }
+  .fc-phase-filter { flex-direction: column; width: 100%; }
+  .fc-select { width: 100%; }
+  .fc-actions { width: 100%; justify-content: space-between; }
+  .fc-card-front, .fc-card-back { padding: 20px; }
+}
+
+@media (max-width: 480px) {
+  .fc-nav { gap: 8px; }
+  .fc-nav-btn { padding: 8px 10px; font-size: 12px; }
+  .flashcards-header h1 { font-size: 22px; }
+}
+
+/* ── Responsividade Flashcards ────────────────────────────────── */
+@media (max-width: 768px) {
+  .fc-controls { flex-direction: column; gap: 10px; align-items: stretch; }
+  .fc-phase-filter { flex-direction: column; }
+  .fc-select { width: 100%; }
+  .fc-actions { justify-content: flex-start; }
+  .fc-card-front, .fc-card-back { padding: 20px; }
+  .fc-question { font-size: 16px; }
+  .fc-answer { font-size: 15px; }
+  .fc-nav { gap: 8px; }
+  .fc-nav-btn { font-size: 13px; padding: 8px 12px; }
+}
+@media (max-width: 480px) {
+  .fc-card { min-height: 240px; }
+  .fc-card-front, .fc-card-back { min-height: 240px; padding: 16px; }
+  .fc-question { font-size: 15px; }
+  .fc-mode-tabs { gap: 4px; }
+  .fc-mode-tab { font-size: 12px; padding: 8px 12px; }
+}

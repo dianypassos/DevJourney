@@ -228,3 +228,22 @@
   font-size: 15px;
   margin-top: 1px;
 }
+
+@media (max-width: 768px) {
+  .setup-grid { grid-template-columns: 1fr; }
+  .tool-card { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .setup-header h1 { font-size: 22px; }
+}
+
+/* ── Responsividade Setup ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .tools-grid { grid-template-columns: 1fr; }
+  .tool-card { padding: 16px; }
+  .setup-steps { gap: 16px; }
+}
+@media (max-width: 480px) {
+  .tool-card { padding: 14px; }
+}

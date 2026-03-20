@@ -8,6 +8,7 @@ import {
 import { useProgress } from '../../hooks/useProgress.ts';
 import { useStreak }   from '../../hooks/useStreak.ts';
 import { BADGES }      from '../../data/roadmap.js';
+import { useSidebar }  from '../../contexts/SidebarContext.tsx';
 import ReminderModal   from './ReminderModal.jsx';
 import './Sidebar.css';
 
@@ -101,19 +102,24 @@ export default function Sidebar() {
   } = useStreak();
 
   const [showReminder, setShowReminder] = useState(false);
+  const { mobileOpen, closeSidebar } = useSidebar();
   const earnedBadgesData = BADGES.filter(b => progress.badges.includes(b.id));
 
   const reminderActive = reminder.enabled && reminder.permission === 'granted';
   const pad = n => String(n).padStart(2, '0');
 
   return (
-    <aside className="sidebar">
-      <div className="sidebar-inner">
-        {/* Logo */}
-        <div className="sidebar-logo">
-          <div className="logo-icon"><Zap size={18} /></div>
-          <span className="logo-text">DevJourney</span>
-        </div>
+    <>
+      <div
+        className={'sidebar-overlay ' + (mobileOpen ? 'open' : '')}
+        onClick={closeSidebar}
+      />
+      <aside className={'sidebar ' + (mobileOpen ? 'open' : '')}>
+        <div className="sidebar-inner">
+          <div className="sidebar-logo">
+            <div className="logo-icon"><Zap size={18} /></div>
+            <span className="logo-text">DevJourney</span>
+          </div>
 
         {/* User Card */}
         <div className="user-card">
@@ -250,5 +256,15 @@ export default function Sidebar() {
         />
       )}
     </aside>
+    </>
+  );
+}
+
+// Botão hambúrguer — usado pelo TopBar no mobile
+export function HamburgerButton({ onClick }) {
+  return (
+    <button className="hamburger-btn" onClick={onClick} aria-label="Abrir menu">
+      <span /><span /><span />
+    </button>
   );
 }

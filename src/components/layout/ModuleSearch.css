@@ -166,3 +166,14 @@
   color: var(--text-3);
   flex-shrink: 0;
 }
+
+/* ── Responsividade ModuleSearch ──────────────────────────────── */
+@media (max-width: 768px) {
+  .module-search-overlay { padding-top: 8vh; padding-left: 12px; padding-right: 12px; }
+  .module-search-modal { max-width: 100%; }
+  .module-search-results { max-height: 260px; }
+}
+@media (max-width: 480px) {
+  .module-search-input { font-size: 14px; }
+  .module-search-title { font-size: 13px; }
+}

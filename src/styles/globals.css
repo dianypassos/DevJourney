@@ -316,3 +316,63 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="light"] .streak-card {
   background: var(--bg-1);
 }
+
+/* ── Responsividade Global ────────────────────────────────────────────────── */
+:root {
+  --sidebar-w: 260px;
+}
+
+@media (max-width: 1024px) {
+  :root { --sidebar-w: 220px; }
+  .page-container { padding: 24px 28px; }
+}
+
+@media (max-width: 768px) {
+  :root { --sidebar-w: 0px; }
+  .main-content { margin-left: 0 !important; }
+  .page-container { padding: 16px; }
+}
+
+@media (max-width: 480px) {
+  .page-container { padding: 12px; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVIDADE GLOBAL — breakpoints unificados
+   480px  = mobile pequeno (iPhone SE)
+   640px  = mobile grande (iPhone Pro Max)
+   768px  = tablet portrait
+   1024px = tablet landscape / notebook pequeno
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Layout base ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  :root { --sidebar-w: 220px; }
+}
+@media (max-width: 768px) {
+  :root { --sidebar-w: 0px; }
+  .main-content { margin-left: 0 !important; }
+  .page-container { padding: 16px 14px 72px !important; }
+}
+@media (max-width: 480px) {
+  .page-container { padding: 12px 12px 72px !important; }
+}
+
+/* ── Tipografia escalada ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  h1 { font-size: clamp(20px, 5vw, 32px) !important; }
+  h2 { font-size: clamp(16px, 4vw, 24px) !important; }
+  h3 { font-size: clamp(14px, 3.5vw, 20px) !important; }
+}
+
+/* ── Cards e grids genéricos ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .card { padding: 16px !important; }
+}
+
+/* ── Botões: sem overflow em mobile ──────────────────────────── */
+@media (max-width: 480px) {
+  .btn { font-size: 13px; padding: 8px 14px; }
+  .btn-sm { font-size: 11px; padding: 5px 10px; }
+}
