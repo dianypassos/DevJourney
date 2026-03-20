@@ -76,22 +76,16 @@
 .fc-card {
   width: 100%;
   min-height: 280px;
-  perspective: 1200px;
   cursor: pointer;
   margin-bottom: 24px;
   user-select: none;
+  position: relative;
 }
 
 .fc-card-inner {
   position: relative;
   width: 100%;
   min-height: 280px;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease;
-}
-
-.fc-card.flipped .fc-card-inner {
-  transform: rotateY(180deg);
 }
 
 .fc-card-front,
@@ -101,26 +95,48 @@
   left: 0;
   right: 0;
   min-height: 280px;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   border-radius: var(--radius-xl);
   padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .fc-card-front {
   background: linear-gradient(135deg, var(--bg-2), var(--bg-3));
   border: 1px solid var(--border-bright);
   justify-content: space-between;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 2;
 }
 
 .fc-card-back {
   background: linear-gradient(135deg, rgba(124,106,247,0.1), rgba(34,217,217,0.06));
   border: 1px solid rgba(124,106,247,0.35);
-  transform: rotateY(180deg);
   justify-content: flex-start;
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fc-card.flipped .fc-card-front {
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fc-card.flipped .fc-card-back {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 2;
 }
 
 .fc-card-tag {
