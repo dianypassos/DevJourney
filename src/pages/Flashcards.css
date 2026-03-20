@@ -101,8 +101,6 @@
   flex-direction: column;
   gap: 16px;
   transition: opacity 0.25s ease, transform 0.25s ease;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .fc-card-front {
@@ -111,7 +109,7 @@
   justify-content: space-between;
   opacity: 1;
   transform: scale(1);
-  pointer-events: auto;
+  visibility: visible;
   z-index: 2;
 }
 
@@ -121,21 +119,21 @@
   justify-content: flex-start;
   opacity: 0;
   transform: scale(0.97);
-  pointer-events: none;
+  visibility: hidden;
   z-index: 1;
 }
 
 .fc-card.flipped .fc-card-front {
   opacity: 0;
   transform: scale(0.97);
-  pointer-events: none;
+  visibility: hidden;
   z-index: 1;
 }
 
 .fc-card.flipped .fc-card-back {
   opacity: 1;
   transform: scale(1);
-  pointer-events: auto;
+  visibility: visible;
   z-index: 2;
 }
 
