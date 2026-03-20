@@ -1,0 +1,336 @@
+.career-page { padding-bottom: 60px; }
+
+.career-header {
+  margin-bottom: 32px;
+}
+
+.career-header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.career-subtitle {
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+.career-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.career-section {
+  border-left: 3px solid var(--section-color);
+  padding: 24px;
+}
+
+.career-section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.section-icon { font-size: 30px; }
+
+.section-title {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: var(--font-display);
+}
+
+/* Tips Grid */
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.tip-card {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tip-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tip-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--section-color, var(--accent));
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tip-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.tip-desc {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+
+.tip-example {
+  background: var(--bg-0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--green);
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+/* Final */
+.career-final {
+  background: linear-gradient(135deg, rgba(124, 106, 247, 0.08), rgba(34, 217, 217, 0.04));
+  border-color: rgba(124, 106, 247, 0.3);
+  text-align: center;
+  padding: 40px;
+}
+
+.final-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.final-icon { font-size: 48px; }
+
+.career-final h2 {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: var(--font-display);
+}
+
+.career-final p {
+  color: var(--text-2);
+  font-size: 15px;
+  max-width: 500px;
+  line-height: 1.65;
+}
+
+.final-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .tips-grid { grid-template-columns: 1fr; }
+  .career-section { padding: 16px; }
+}
+
+/* Interview section */
+.career-interview-section {
+  margin-top: 32px;
+}
+
+.career-section-header {
+  margin-bottom: 20px;
+}
+
+.career-section-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.career-section-header p {
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.interview-categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.interview-cat-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  transition: all var(--transition);
+}
+
+.interview-cat-tab:hover { border-color: var(--text-2); color: var(--text-1); }
+.interview-cat-tab.active { font-weight: 700; }
+
+.cat-count {
+  background: var(--bg-3);
+  padding: 1px 7px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+
+/* Q&A */
+.interview-qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qa-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition);
+}
+
+.qa-item.open {
+  border-color: var(--qa-color, var(--accent));
+}
+
+.qa-question {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  cursor: pointer;
+  background: var(--bg-2);
+  transition: background var(--transition);
+}
+
+.qa-question:hover { background: var(--bg-3); }
+
+.qa-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--qa-color, var(--accent));
+  background: rgba(124,106,247,0.1);
+  padding: 2px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.qa-q-text {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.qa-chevron {
+  color: var(--text-2);
+  font-size: 10px;
+}
+
+.qa-answer {
+  padding: 16px 18px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-0);
+}
+
+.qa-answer-label {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--qa-color, var(--accent));
+  margin-bottom: 8px;
+}
+
+.qa-answer p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--text-1);
+}
+
+/* Market insights */
+.market-insights {
+  margin-top: 32px;
+  padding: 24px;
+}
+
+.market-insights h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.insight-card {
+  background: var(--bg-3);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+}
+
+.insight-value {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.insight-label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.insight-desc {
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+/* ── QA Level tabs ─────────────────────────────────────────── */
+.qa-level-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.qa-level-tab {
+  padding: 8px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.qa-level-tab:hover { border-color: var(--accent); color: var(--accent); }
+.qa-level-tab.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
