@@ -2,7 +2,7 @@ import { miniProjectPhase10 } from '../miniprojects.js';
 export const phase10 = {
   id: 'phase-14',
   title: 'Engenharia de Software',
-  phase: 14,
+  phase: 10,
   color: '#fc8181',
   icon: '🏗️',
   description: 'Clean Code, testes, SOLID, padrões de projeto e as práticas que separam devs mediocres dos excelentes.',

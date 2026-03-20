@@ -2,7 +2,7 @@ import { miniProjectPhase13 } from '../miniprojects.js';
 export const phase13 = {
   id: 'phase-12',
   title: 'Banco de Dados com Profundidade',
-  phase: 12,
+  phase: 13,
   color: '#06b6d4',
   icon: '🗄️',
   description: 'Do modelo relacional ao Redis. Modelagem, SQL avançado, índices, transações ACID, query planning e NoSQL — o que separa devs que usam banco dos que entendem banco.',

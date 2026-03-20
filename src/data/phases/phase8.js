@@ -2,7 +2,7 @@ import { miniProjectPhase8 } from '../miniprojects.js';
 export const phase8 = {
   id: 'phase-10',
   title: 'Backend com Node.js',
-  phase: 10,
+  phase: 8,
   color: '#68d391',
   icon: '🖧',
   description: 'Crie APIs REST profissionais com Node.js, Express e bancos de dados.',

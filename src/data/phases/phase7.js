@@ -2,7 +2,7 @@ import { miniProjectPhase7 } from '../miniprojects.js';
 export const phase7 = {
   id: 'phase-8',
   title: 'TypeScript',
-  phase: 8,
+  phase: 7,
   color: '#3178c6',
   icon: '🔷',
   description: 'TypeScript é obrigatório no mercado. Tipagem estática que previne bugs, melhora o autocomplete e torna o código autodocumentado.',

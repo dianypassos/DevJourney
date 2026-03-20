@@ -2,7 +2,7 @@ import { miniProjectPhase9 } from '../miniprojects.js';
 export const phase9 = {
   id: 'phase-13',
   title: 'Fullstack e Deploy',
-  phase: 13,
+  phase: 9,
   color: '#b794f4',
   icon: '🚀',
   description: 'Integre frontend e backend, entenda CORS, variáveis de ambiente e deploy profissional.',

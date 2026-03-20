@@ -2,7 +2,7 @@ import { miniProjectPhase18 } from '../miniprojects.js';
 export const phase18 = {
   id: 'phase-9',
   title: 'Next.js — Fullstack com React',
-  phase: 9,
+  phase: 11,
   color: '#0ea5e9',
   icon: '▲',
   description: 'SSR, SSG, ISR, Server Components, App Router, Server Actions — Next.js mudou o que significa ser fullstack nos últimos anos. Quem sabe só React sem Next.js está incompleto para o mercado atual.',

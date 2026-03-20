@@ -2,7 +2,7 @@ import { miniProjectPhase12 } from '../miniprojects.js';
 export const phase12 = {
   id: 'phase-6',
   title: 'Algoritmos e Estruturas de Dados',
-  phase: 6,
+  phase: 12,
   color: '#f97316',
   icon: '🧠',
   description: 'O conhecimento que separa desenvolvedores de engenheiros. Estruturas de dados, complexidade, busca, ordenação e resolução de problemas — o que toda empresa séria avalia em entrevistas. Mesmo sendo a fase 17, os tópicos de Big O, busca binária e hash tables aparecem em entrevistas técnicas de nível júnior — considere estudar pelo menos os 3 primeiros módulos antes de começar a procurar emprego.',

@@ -2,7 +2,7 @@ import { miniProjectPhase6 } from '../miniprojects.js';
 export const phase6 = {
   id: 'phase-7',
   title: 'React',
-  phase: 7,
+  phase: 6,
   color: '#61dafb',
   icon: '⚛️',
   description: 'A biblioteca mais popular para UIs. Componentes, estado, hooks e o ecossistema React.',

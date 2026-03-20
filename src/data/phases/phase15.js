@@ -2,7 +2,7 @@ import { miniProjectPhase15 } from '../miniprojects.js';
 export const phase15 = {
   id: 'phase-11',
   title: 'Redes e HTTP',
-  phase: 11,
+  phase: 14,
   color: '#8b5cf6',
   icon: '🌐',
   description: 'Do bit na rede ao HTTPS no browser. TCP/IP, DNS, HTTP/1.1 vs HTTP/2 vs HTTP/3, headers, autenticação, WebSockets e performance — o que acontece em cada requisição que você faz.',
