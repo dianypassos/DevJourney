@@ -1,6 +1,8 @@
 .lesson-page {
   max-width: 820px;
   margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .lesson-header {
@@ -639,4 +641,32 @@
   .lesson-meta { flex-wrap: wrap; gap: 6px; }
   .completed-actions { flex-direction: column; }
   .completed-actions .btn { width: 100%; justify-content: center; }
+}
+
+/* ── Overflow fix global na lesson ───────────────────────────── */
+.lesson-text,
+.lesson-highlight,
+.lesson-list,
+.lesson-sections,
+.lesson-cta {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .lesson-title {
+    font-size: clamp(16px, 5vw, 24px);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .lesson-content { padding: 20px 14px 80px; }
+  .lesson-header { padding: 12px 14px 0; }
+  .module-action .btn { display: flex; font-size: 11px; padding: 5px 8px; }
+}
+
+@media (max-width: 480px) {
+  .lesson-content { padding: 16px 12px 80px; }
+  .lesson-text { font-size: 14px; }
+  .lesson-tab { padding: 8px 8px; font-size: 11px; gap: 4px; }
 }

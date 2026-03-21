@@ -103,6 +103,7 @@ input, textarea { font-family: inherit; }
 .app-layout {
   display: flex;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .main-content {
@@ -111,6 +112,9 @@ input, textarea { font-family: inherit; }
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  max-width: calc(100vw - 260px);
+  overflow-x: hidden;
 }
 
 /* All pages are centered in the available area */
@@ -120,6 +124,7 @@ input, textarea { font-family: inherit; }
   max-width: var(--content-max);
   margin: 0 auto;
   padding: 28px 32px 80px;
+  overflow-x: hidden;
 }
 
 /* ── Typography ─────────────────────────────────────────────── */

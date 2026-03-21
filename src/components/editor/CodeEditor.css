@@ -6,6 +6,8 @@
   font-family: var(--font-mono);
   font-size: 13px;
   margin: 16px 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 .editor-header {
@@ -117,6 +119,7 @@
   white-space: pre;
   min-height: 160px;
   width: 100%;
+  overflow-x: auto;
 }
 
 .editor-textarea::placeholder { color: #444; }

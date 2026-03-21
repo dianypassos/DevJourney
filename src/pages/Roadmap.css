@@ -295,7 +295,6 @@
 @media (max-width: 600px) {
   .phase-header-node { flex-wrap: wrap; }
   .phase-node-progress { width: auto; }
-  .module-action { display: none; }
 }
 
 /* Out-of-order indicator on roadmap card */
@@ -363,7 +362,6 @@
   .roadmap-header h1 { font-size: 24px; }
   .phase-header-node { flex-wrap: wrap; gap: 10px; }
   .phase-node-progress { width: 100%; text-align: left; }
-  .module-action { display: none; }
   .phase-node-time { font-size: 10px; }
 }
 
@@ -390,4 +388,31 @@
   .module-title { font-size: 13px; }
   .module-action .btn { font-size: 11px; padding: 5px 8px; }
   .timeline-connector { margin-left: 20px; }
+}
+
+/* ── Overflow e botão fix mobile ─────────────────────────────── */
+.roadmap-timeline,
+.timeline-phase,
+.phase-modules,
+.module-node {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .module-node { flex-wrap: wrap; gap: 8px; }
+  .module-action { flex-shrink: 0; }
+  .module-action .btn {
+    display: flex !important;
+    font-size: 11px;
+    padding: 5px 8px;
+    white-space: nowrap;
+  }
+  .phase-header-node { overflow: hidden; }
+}
+
+@media (max-width: 480px) {
+  .roadmap-timeline { padding: 0; }
+  .module-meta { font-size: 10px; gap: 8px; }
+  .phase-node-num { font-size: 10px; }
 }
