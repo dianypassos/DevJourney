@@ -107,7 +107,7 @@ input, textarea { font-family: inherit; }
 
 .main-content {
   flex: 1;
-  margin-left: var(--sidebar-w);
+  margin-left: 260px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -318,23 +318,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ── Responsividade Global ────────────────────────────────────────────────── */
-:root {
-  --sidebar-w: 260px;
-}
 
 @media (max-width: 1024px) {
-  :root { --sidebar-w: 220px; }
   .page-container { padding: 24px 28px; }
 }
 
 @media (max-width: 768px) {
-  :root { --sidebar-w: 0px; }
   .main-content { margin-left: 0 !important; }
-  .page-container { padding: 16px; }
+  .page-container { padding: 16px 14px 72px; }
 }
 
 @media (max-width: 480px) {
-  .page-container { padding: 12px; }
+  .page-container { padding: 12px 12px 72px; }
 }
 
 
