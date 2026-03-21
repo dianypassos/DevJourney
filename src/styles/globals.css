@@ -108,13 +108,19 @@ input, textarea { font-family: inherit; }
 
 .main-content {
   flex: 1;
-  margin-left: 260px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  max-width: calc(100vw - 260px);
   overflow-x: hidden;
+  /* sidebar é fixed, então main-content precisa de padding-left no desktop */
+  padding-left: 260px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-left: 0;
+  }
 }
 
 /* All pages are centered in the available area */
@@ -286,10 +292,6 @@ h1, h2, h3, h4, h5, h6 {
   .page-container { padding: 24px 20px 60px; }
 }
 
-@media (max-width: 768px) {
-  .main-content { margin-left: 0; }
-  .page-container { padding: 20px 16px 60px; }
-}
 
 /* ── Light theme: hljs uses lighter palette ─────────────────── */
 [data-theme="light"] .hljs {
@@ -324,18 +326,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Responsividade Global ────────────────────────────────────────────────── */
 
-@media (max-width: 1024px) {
-  .page-container { padding: 24px 28px; }
-}
-
-@media (max-width: 768px) {
-  .main-content { margin-left: 0 !important; }
-  .page-container { padding: 16px 14px 72px; }
-}
-
-@media (max-width: 480px) {
-  .page-container { padding: 12px 12px 72px; }
-}
 
 
 /* ═══════════════════════════════════════════════════════════════
@@ -352,7 +342,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
   :root { --sidebar-w: 0px; }
-  .main-content { margin-left: 0 !important; }
   .page-container { padding: 16px 14px 72px !important; }
 }
 @media (max-width: 480px) {
