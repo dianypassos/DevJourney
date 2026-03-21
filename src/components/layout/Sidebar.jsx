@@ -196,6 +196,7 @@ export default function Sidebar() {
               to={to}
               end={to === '/'}
               className={({ isActive }) => 'nav-item ' + (isActive ? 'active' : '')}
+              onClick={closeSidebar}
             >
               <Icon size={17} />
               <span>{label}</span>
