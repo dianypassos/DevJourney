@@ -49,35 +49,3 @@ export default function App() {
     </ErrorBoundary>
   );
 }
-
-export default function App() {
-  return (
-    <ErrorBoundary>
-    <ThemeProvider>
-    <AstraProvider>
-    <BrowserRouter>
-      <div className="noise-overlay" />
-      <div className="app-layout">
-        <Sidebar />
-        <div className="main-content">
-          <TopBar />
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/roadmap" element={<Roadmap />} />
-            <Route path="/lesson/:moduleId" element={<Lesson />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/flashcards" element={<Flashcards />} />
-            <Route path="/setup" element={<Setup />} />
-            <Route path="/career" element={<Career />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-      </div>
-      <ChatWidget />
-    </BrowserRouter>
-    </AstraProvider>
-    </ThemeProvider>
-    </ErrorBoundary>
-  );
-}
